@@ -610,9 +610,9 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
             Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
-                                 title = 'Slam Mirrorbot Search',
-                                 author_name='Slam Mirrorbot',
-                                 author_url='https://github.com/SlamDevs/slam-mirrorbot',
+                                 title = 'SA MIRROR BOT search results',
+                                 author_name='_𒆜_🅢_🄾_🅙_🄾_🅛_𒆜_',
+                                 author_url='https://t.me/samc_z',
                                  html_content=content)
         return
 
@@ -762,7 +762,7 @@ class GoogleDriveHelper:
                     # Excluded index link as indexes cant download or open these shortcuts
                 else:
                     furl = f"https://drive.google.com/uc?id={file.get('id')}&export=download"
-                    msg += f"📄 <code>{file.get('name')}<br>({get_readable_file_size(int(file.get('size')))})</code><br>"
+                    msg += f"🗂️ <code>{file.get('name')}<br>({get_readable_file_size(int(file.get('size')))})</code><br>"
                     if SHORTENER is not None and SHORTENER_API is not None:
                         sfurl = short_url(furl)
                         msg += f"<b><a href={sfurl}>Drive Link</a></b>"
@@ -807,9 +807,9 @@ class GoogleDriveHelper:
 
         for content in self.telegraph_content :
             self.path.append(Telegraph(access_token=telegraph_token).create_page(
-                                                    title = 'Slam Mirrorbot Search',
-                                                    author_name='Slam Mirrorbot',
-                                                    author_url='https://github.com/SlamDevs/slam-mirrorbot',
+                                                    title = 'SA MIRROR BOT search results',
+                                                    author_name='_𒆜_🅢_🄾_🅙_🄾_🅛_𒆜_',
+                                                    author_url='https://t.me/samc_z',
                                                     html_content=content
                                                     )['path'])
 
