@@ -21,15 +21,15 @@ PAGE_NO = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Uploading...📤"
-    STATUS_DOWNLOADING = "Downloading...📥"
-    STATUS_CLONING = "Cloning...♻️"
-    STATUS_WAITING = "Queued...📝"
-    STATUS_FAILED = "Failed 🚫. Cleaning Download..."
-    STATUS_PAUSE = "Paused...⭕️"
-    STATUS_ARCHIVING = "Archiving...🔐"
-    STATUS_EXTRACTING = "Extracting...📂"
-    STATUS_SPLITTING = "Splitting...✂️"
+    STATUS_UPLOADING = "Uploading..."
+    STATUS_DOWNLOADING = "Downloading..."
+    STATUS_CLONING = "Cloning..."
+    STATUS_WAITING = "Queued..."
+    STATUS_FAILED = "Failed . Cleaning Download..."
+    STATUS_PAUSE = "Paused..."
+    STATUS_ARCHIVING = "Archiving..."
+    STATUS_EXTRACTING = "Extracting..."
+    STATUS_SPLITTING = "Splitting..."
 
 
 PROGRESS_MAX_SIZE = 100 // 8
@@ -130,6 +130,19 @@ def get_readable_message():
         for index, download in enumerate(list(download_dict.values())[start:], start=1):
             msg += f"\n<b>➜File Name:</b> <code>{download.name()}</code>"
             msg += f"\n\n<b>➜Status:</b> <i>{download.status()}</i>"
+            if self.message.from_user.username:
+
+                uname = f"@{self.message.from_user.username}"
+
+            else:
+
+                uname = f'<a href="tg://user?id={self.message.from_user.id}">{self.message.from_user.first_name}</a>'
+
+            if uname is not None:
+
+                msg += f'\n\n➜Request By: {uname}'
+
+            try:
             if download.status() not in [
                 MirrorStatus.STATUS_ARCHIVING,
                 MirrorStatus.STATUS_EXTRACTING,
