@@ -56,7 +56,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! not a Authorized user.\nPlease deploy your own <b>slam-mirrorbot</b>.',
+            'Oops! Sorry.',
             context.bot,
             update,
             reply_markup,
@@ -156,7 +156,7 @@ help_string_telegraph = f'''<br>
 help = Telegraph(access_token=telegraph_token).create_page(
         title='Telegraph File Wiew ',
         author_name='_𒆜_🅢_🄾_🅙_🄾_🅛_𒆜_',
-        author_url='https://t.me/sa_mirror_bot',
+        author_url='https://t.me/samc_z',
         html_content=help_string_telegraph,
     )["path"]
 
