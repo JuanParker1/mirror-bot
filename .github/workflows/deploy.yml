@@ -10,11 +10,11 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: b148579e-7a00-4699-8988-8dcb98f8740e
-          heroku_app_name: samzc4
+          heroku_app_name: samzc44
           heroku_email: djkgcbafsxbcuvv@candassociates.com
           usedocker: true
           docker_heroku_process_type: web
           stack: "container"
           region: "eu"
         env:
-          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/Snax-phycho/c1af4783a3db051531666645ede87b0e/raw/Config.env
+          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/Snax-phycho/93a0c828c52d2e61053ab9d3a9e84df6/raw/Config.env
