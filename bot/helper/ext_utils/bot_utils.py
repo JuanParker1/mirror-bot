@@ -112,7 +112,7 @@ def get_progress_bar_string(status):
     if cPart >= 0:
         p_str += PROGRESS_INCOMPLETE[cPart]
     p_str += '░' * (PROGRESS_MAX_SIZE - cFull)
-    p_str = f"\n<b>➜Processing:</b>{p_str}"
+    p_str = f"\n<b>➜Processing:</b> {p_str}"
     return p_str
 
 def get_readable_message():
@@ -129,7 +129,6 @@ def get_readable_message():
             start = COUNT
         for index, download in enumerate(list(download_dict.values())[start:], start=1):
             msg += f"\n<b>➜File Name:</b> <code>{download.name()}</code>"
-            msg += f"\n<b>User:</b> <b>{download.message.from_user.first_name}</b>"
             msg += f"\n\n<b>➜Status:</b> <i>{download.status()}</i>"
             if download.status() not in [
                 MirrorStatus.STATUS_ARCHIVING,
@@ -154,6 +153,7 @@ def get_readable_message():
                            f"\n<b>➜Leechers:</b> <code>{download.torrent_info().num_leechs}</code>"
                 except:
                     pass
+                msg += f"\n\n<b>➜Request By:</b> <b>{download.message.from_user.first_name}</b>"
                 msg += f"\n\n<b>➜To Cancel:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
