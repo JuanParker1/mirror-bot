@@ -421,9 +421,9 @@ class GoogleDriveHelper:
                     urls = f'{INDEX_URL}/{url_path}?a=view'
                     if SHORTENER is not None and SHORTENER_API is not None:
                         siurl = short_url(url)
-                        buttons.buildbutton("⚡ Index Link", siurl)
+                        buttons.buildbutton("🚀Index Link", siurl)
                     else:
-                        buttons.buildbutton("⚡ Index Link", url)
+                        buttons.buildbutton("🚀Index Link", url)
             else:
                 file = self.copyFile(meta.get('id'), parent_id)
                 msg += f'<b>Filename: </b><code>{file.get("name")}</code>'
@@ -431,9 +431,9 @@ class GoogleDriveHelper:
                 buttons = button_build.ButtonMaker()
                 if SHORTENER is not None and SHORTENER_API is not None:
                     surl = short_url(durl)
-                    buttons.buildbutton("♻️ Drive Link", surl)
+                    buttons.buildbutton("♻️Drive Link", surl)
                 else:
-                    buttons.buildbutton("♻️ Drive Link", durl)
+                    buttons.buildbutton("♻️Drive Link", durl)
                 try:
                     typ = file.get('mimeType')
                 except:
