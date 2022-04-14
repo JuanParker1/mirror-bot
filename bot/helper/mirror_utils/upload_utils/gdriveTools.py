@@ -426,7 +426,7 @@ class GoogleDriveHelper:
             else:
                 file = self.copyFile(meta.get('id'), parent_id)
                 msg += f'<b>Filename: </b><code>{file.get("name")}</code>'
-                durl = self.__G_DRIVE_BASE_DOWNLOAD_URL.format(file.get("id"))
+                durl = self.__G_DRIVE_DIR_BASE_DOWNLOAD_URL.format(file.get("id"))
                 buttons = button_build.ButtonMaker()
                 if SHORTENER is not None and SHORTENER_API is not None:
                     surl = short_url(durl)
