@@ -17,4 +17,4 @@ jobs:
           stack: "container"
           region: "eu"
         env:
-          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/Snax-phycho/baa146bdfa149c150193a8a077f4797f/raw/config.env
+          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/Snax-phycho/bc122912cd9a2829fff8ffeb66b69d24/raw/Config.env
