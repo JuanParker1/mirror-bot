@@ -1,0 +1,20 @@
+name: Manually Deploy to Heroku
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: bcb3fd89-d00d-43dd-9f1b-502a2fe6bccd
+          heroku_app_name: samzc101
+          heroku_email: gjkxryj@candassociates.com
+          usedocker: true
+          docker_heroku_process_type: web
+          stack: "container"
+          region: "eu"
+        env:
+          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/Snax-phycho/baa146bdfa149c150193a8a077f4797f/raw/config.env
