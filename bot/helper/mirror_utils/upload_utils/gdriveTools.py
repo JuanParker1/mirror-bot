@@ -431,9 +431,9 @@ class GoogleDriveHelper:
                 buttons = button_build.ButtonMaker()
                 if SHORTENER is not None and SHORTENER_API is not None:
                     surl = short_url(durl)
-                    buttons.buildbutton("☁️ Drive Link", surl)
+                    buttons.buildbutton("♻️ Drive Link", surl)
                 else:
-                    buttons.buildbutton("☁️ Drive Link", durl)
+                    buttons.buildbutton("♻️ Drive Link", durl)
                 try:
                     typ = file.get('mimeType')
                 except:
