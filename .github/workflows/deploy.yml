@@ -9,9 +9,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: bcb3fd89-d00d-43dd-9f1b-502a2fe6bccd
+          heroku_api_key: a0505913-c627-4541-ac53-8039ce7ca308
           heroku_app_name: samzc101
-          heroku_email: gjkxryj@candassociates.com
+          heroku_email: iqmjfofrnvqjbdl@candassociates.com
           usedocker: true
           docker_heroku_process_type: web
           stack: "container"
